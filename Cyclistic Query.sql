@@ -501,7 +501,7 @@ GROUP BY rider_class,
 ORDER BY Year(ride_date),
 	DATEPART(quarter, ride_date) 
 
--- View for geospatial data per month for both rider class
+-- View for ride count per day of the week for each rider class
 	CREATE VIEW Day_of_Week VS Rider_Class
 SELECT rider_class,
 	day_of_week,
