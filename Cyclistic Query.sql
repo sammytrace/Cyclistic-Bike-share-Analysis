@@ -377,7 +377,7 @@ SELECT ride_id,
 	day_of_week
 FROM [dbo].[Nov_2022]
 
-
+-- TO GET A LOOK AT THE NEWLY MERGED DATASET
 SELECT *
 FROM Bike_Data 
 
@@ -458,22 +458,6 @@ GROUP BY rider_class,
 	day_of_week
 ORDER BY day_of_week 
 
--- View for geospatial data for all rides
-	CREATE VIEW geospatial_data as
-SELECT ride_id,
-	rider_class,
-	start_lat,
-	start_lng,
-	end_lat,
-	end_lng
-FROM Bike_Data
-GROUP BY ride_id,
-	rider_class,
-	start_lat,
-	start_lng,
-	end_lat,
-	end_lng
-ORDER BY ride_id 
 
 -- View for ride count per month for each rider_class
 	CREATE VIEW ride_count_per_month as
